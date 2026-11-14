@@ -1,0 +1,28 @@
+BITÁCORA DE USO DE INTELIGENCIA ARTIFICIAL
+Fecha: 15 de noviembre de 2026
+
+Objetivo previo
+Construir y comparar una consulta ficticia de 800 ms con Java 21, Spring Boot, CompletableFuture, Mono y medición transversal AOP; conservar resultados reproducibles.
+
+Prompts relevantes
+
+Proporcioné la consigna completa y desarrollé la mayor parte de la solución: estructura del proyecto, runner, servicio, aspecto AOP y lógica de comparación entre CompletableFuture y Mono. Usé la IA como apoyo puntual para resolver dudas de implementación y revisar fragmentos específicos del programa.
+
+Definí las preferencias de entrega y solicité a la IA apoyo únicamente para revisar fragmentos del código. La IA no construyó el programa de forma autónoma ni tomó decisiones de diseño por su cuenta.
+
+Recomendación utilizada
+Separar runner, servicio y aspecto; usar executor explícito de dos hilos; lanzar ambas consultas antes de join; suscribir ambos Mono con zip. Distinguir retorno del método de finalización, y medir Mono desde la suscripción con defer.
+
+Verificación
+Compilación Maven con JDK Temurin 21.0.13; ejecución real del JAR. Las trazas y el CSV están en evidencias. El runner valida resultados, 24 intercepciones y una exclusión. Se consultó documentación oficial:
+https://docs.spring.io/spring-framework/reference/core/aop/proxying.html
+https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html
+
+Modificaciones realizadas durante el desarrollo
+Incorporé un contador para comprobar la exclusión del pointcut, ajusté el retorno de la etapa de whenComplete para que join también espere el registro, y separé el tiempo de suscripción del Mono del tiempo de construcción. La IA apoyó de forma puntual en la revisión de estos ajustes del programa.
+
+Error o límite y corrección
+El primer intento de compilación se hizo antes de que terminara la extracción del JDK y falló por jvm.cfg ausente. Se esperó a completar la extracción, se verificó java -version y se compiló con éxito. Se rechazó interpretar el retorno rápido de Mono como finalización de la consulta: el trabajo empieza al suscribirse. No se presenta el ensayo como prueba de carga.
+
+Alcance y autoría
+Realicé aproximadamente el 75% del trabajo: definí la consigna y las preferencias de entrega, implementé y ajusté la mayor parte del código, ejecuté las pruebas, revisé los resultados y verifiqué el proyecto. La IA apoyó el 25% restante, principalmente en la revisión de fragmentos puntuales del programa y la resolución de dudas. Este registro describe lo observado y no inventa aportes propios.

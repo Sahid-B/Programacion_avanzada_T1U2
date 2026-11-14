@@ -1,0 +1,123 @@
+JAVA=21.0.13 | demora=800ms | executor=2 hilos | IDs ficticios INC-001 INC-002
+POINTCUT excluida: 0 intercepciones (verificado)
+
+INICIO BLOQUEANTE CALENTAMIENTO hilo=main
+AOP ENTRADA      metodo=bloqueante id=INC-001 hilo=main ms=0.042
+AOP RETORNO      metodo=bloqueante id=INC-001 hilo=main ms=998.957
+AOP ENTRADA      metodo=bloqueante id=INC-002 hilo=main ms=0.003
+AOP RETORNO      metodo=bloqueante id=INC-002 hilo=main ms=839.337
+RESUMEN BLOQUEANTE n=0 retorno1=1049.098 retorno2=840.494 retornoPar=1889.592 total=1889.592 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO BLOQUEANTE MEDICION 1 hilo=main
+AOP ENTRADA      metodo=bloqueante id=INC-001 hilo=main ms=0.007
+AOP RETORNO      metodo=bloqueante id=INC-001 hilo=main ms=828.066
+AOP ENTRADA      metodo=bloqueante id=INC-002 hilo=main ms=0.004
+AOP RETORNO      metodo=bloqueante id=INC-002 hilo=main ms=810.013
+RESUMEN BLOQUEANTE n=1 retorno1=832.675 retorno2=811.091 retornoPar=1643.767 total=1643.767 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO BLOQUEANTE MEDICION 2 hilo=main
+AOP ENTRADA      metodo=bloqueante id=INC-001 hilo=main ms=0.005
+AOP RETORNO      metodo=bloqueante id=INC-001 hilo=main ms=819.477
+AOP ENTRADA      metodo=bloqueante id=INC-002 hilo=main ms=0.003
+AOP RETORNO      metodo=bloqueante id=INC-002 hilo=main ms=824.211
+RESUMEN BLOQUEANTE n=2 retorno1=820.716 retorno2=825.451 retornoPar=1646.168 total=1646.168 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO BLOQUEANTE MEDICION 3 hilo=main
+AOP ENTRADA      metodo=bloqueante id=INC-001 hilo=main ms=0.004
+AOP RETORNO      metodo=bloqueante id=INC-001 hilo=main ms=817.746
+AOP ENTRADA      metodo=bloqueante id=INC-002 hilo=main ms=0.004
+AOP RETORNO      metodo=bloqueante id=INC-002 hilo=main ms=810.032
+RESUMEN BLOQUEANTE n=3 retorno1=819.779 retorno2=811.411 retornoPar=1631.190 total=1631.191 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO FUTURE CALENTAMIENTO hilo=main
+AOP ENTRADA      metodo=asincrona id=INC-001 hilo=main ms=0.004
+AOP RETORNO      metodo=asincrona id=INC-001 hilo=main ms=34.420
+AOP ENTRADA      metodo=asincrona id=INC-002 hilo=main ms=0.005
+AOP RETORNO      metodo=asincrona id=INC-002 hilo=main ms=1.203
+AOP FIN_FUTURE   metodo=asincrona id=INC-001 hilo=consulta-1 ms=1027.722
+AOP FIN_FUTURE   metodo=asincrona id=INC-002 hilo=consulta-2 ms=965.694
+RESUMEN FUTURE n=0 retorno1=65.792 retorno2=1.965 retornoPar=67.757 total=1032.472 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO FUTURE MEDICION 1 hilo=main
+AOP ENTRADA      metodo=asincrona id=INC-001 hilo=main ms=0.004
+AOP RETORNO      metodo=asincrona id=INC-001 hilo=main ms=21.136
+AOP ENTRADA      metodo=asincrona id=INC-002 hilo=main ms=0.006
+AOP RETORNO      metodo=asincrona id=INC-002 hilo=main ms=2.131
+AOP FIN_FUTURE   metodo=asincrona id=INC-001 hilo=consulta-1 ms=847.138
+AOP FIN_FUTURE   metodo=asincrona id=INC-002 hilo=consulta-2 ms=819.446
+RESUMEN FUTURE n=1 retorno1=36.639 retorno2=30.204 retornoPar=66.843 total=869.185 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO FUTURE MEDICION 2 hilo=main
+AOP ENTRADA      metodo=asincrona id=INC-001 hilo=main ms=0.004
+AOP RETORNO      metodo=asincrona id=INC-001 hilo=main ms=13.730
+AOP ENTRADA      metodo=asincrona id=INC-002 hilo=main ms=0.003
+AOP RETORNO      metodo=asincrona id=INC-002 hilo=main ms=13.868
+AOP FIN_FUTURE   metodo=asincrona id=INC-001 hilo=consulta-1 ms=825.112
+AOP FIN_FUTURE   metodo=asincrona id=INC-002 hilo=consulta-2 ms=827.429
+RESUMEN FUTURE n=2 retorno1=14.920 retorno2=32.330 retornoPar=47.249 total=842.987 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO FUTURE MEDICION 3 hilo=main
+AOP ENTRADA      metodo=asincrona id=INC-001 hilo=main ms=0.003
+AOP RETORNO      metodo=asincrona id=INC-001 hilo=main ms=0.446
+AOP ENTRADA      metodo=asincrona id=INC-002 hilo=main ms=0.002
+AOP RETORNO      metodo=asincrona id=INC-002 hilo=main ms=4.384
+AOP FIN_FUTURE   metodo=asincrona id=INC-001 hilo=consulta-1 ms=810.969
+AOP FIN_FUTURE   metodo=asincrona id=INC-002 hilo=consulta-2 ms=821.913
+RESUMEN FUTURE n=3 retorno1=0.952 retorno2=4.838 retornoPar=5.790 total=823.846 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO MONO CALENTAMIENTO hilo=main
+AOP ENTRADA      metodo=noBloqueante id=INC-001 hilo=main ms=0.003
+AOP RETORNO      metodo=noBloqueante id=INC-001 hilo=main ms=676.275
+AOP ENTRADA      metodo=noBloqueante id=INC-002 hilo=main ms=0.005
+AOP RETORNO      metodo=noBloqueante id=INC-002 hilo=main ms=0.532
+AOP SUSCRIPCION  metodo=noBloqueante id=INC-001 hilo=main ms=0.015
+AOP SUSCRIPCION  metodo=noBloqueante id=INC-002 hilo=main ms=0.009
+AOP FIN_MONO     metodo=noBloqueante id=INC-001 hilo=parallel-1 ms=866.860
+AOP FIN_MONO     metodo=noBloqueante id=INC-002 hilo=parallel-2 ms=817.522
+RESUMEN MONO n=0 retorno1=708.541 retorno2=0.961 retornoPar=709.502 total=2367.928 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO MONO MEDICION 1 hilo=main
+AOP ENTRADA      metodo=noBloqueante id=INC-001 hilo=main ms=0.003
+AOP RETORNO      metodo=noBloqueante id=INC-001 hilo=main ms=0.298
+AOP ENTRADA      metodo=noBloqueante id=INC-002 hilo=main ms=0.002
+AOP RETORNO      metodo=noBloqueante id=INC-002 hilo=main ms=0.273
+AOP SUSCRIPCION  metodo=noBloqueante id=INC-001 hilo=main ms=0.002
+AOP SUSCRIPCION  metodo=noBloqueante id=INC-002 hilo=main ms=0.007
+AOP FIN_MONO     metodo=noBloqueante id=INC-001 hilo=parallel-3 ms=827.896
+AOP FIN_MONO     metodo=noBloqueante id=INC-002 hilo=parallel-4 ms=830.666
+RESUMEN MONO n=1 retorno1=0.697 retorno2=0.620 retornoPar=1.317 total=838.903 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO MONO MEDICION 2 hilo=main
+AOP ENTRADA      metodo=noBloqueante id=INC-001 hilo=main ms=0.002
+AOP RETORNO      metodo=noBloqueante id=INC-001 hilo=main ms=0.346
+AOP ENTRADA      metodo=noBloqueante id=INC-002 hilo=main ms=0.003
+AOP RETORNO      metodo=noBloqueante id=INC-002 hilo=main ms=0.582
+AOP SUSCRIPCION  metodo=noBloqueante id=INC-001 hilo=main ms=0.005
+AOP SUSCRIPCION  metodo=noBloqueante id=INC-002 hilo=main ms=0.008
+AOP FIN_MONO     metodo=noBloqueante id=INC-002 hilo=parallel-6 ms=816.583
+AOP FIN_MONO     metodo=noBloqueante id=INC-001 hilo=parallel-5 ms=824.379
+RESUMEN MONO n=2 retorno1=1.112 retorno2=8.418 retornoPar=9.531 total=834.844 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+
+INICIO MONO MEDICION 3 hilo=main
+AOP ENTRADA      metodo=noBloqueante id=INC-001 hilo=main ms=0.002
+AOP RETORNO      metodo=noBloqueante id=INC-001 hilo=main ms=0.306
+AOP ENTRADA      metodo=noBloqueante id=INC-002 hilo=main ms=0.002
+AOP RETORNO      metodo=noBloqueante id=INC-002 hilo=main ms=0.224
+AOP SUSCRIPCION  metodo=noBloqueante id=INC-001 hilo=main ms=0.002
+AOP SUSCRIPCION  metodo=noBloqueante id=INC-002 hilo=main ms=0.005
+AOP FIN_MONO     metodo=noBloqueante id=INC-002 hilo=parallel-8 ms=814.528
+AOP FIN_MONO     metodo=noBloqueante id=INC-001 hilo=parallel-7 ms=833.306
+RESUMEN MONO n=3 retorno1=0.737 retorno2=0.530 retornoPar=1.267 total=836.173 ms
+RESULTADOS Incidencia[id=INC-001, estado=EN_PROCESO] | Incidencia[id=INC-002, estado=EN_PROCESO]
+VALIDACION OK: 24 consultas equivalentes; exclusion OK; 9 mediciones y 3 calentamientos
